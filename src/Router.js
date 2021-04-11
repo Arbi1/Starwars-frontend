@@ -1,15 +1,16 @@
 import React, { Suspense, lazy } from "react";
 import { Router, Switch, Route } from "react-router-dom";
-import Favorites from "./components/Favorites";
+
 import { history } from "./history";
-import AllMovies from "./components/Movies/AllMovies";
-import Movie from "./components/Movies/Movie";
+import MainPage from "./components/MainPage";
 
 class AppRouter extends React.Component {
   render() {
     return (
       <Router history={history}>
-        <Switch></Switch>
+        <Switch>
+          <Route exact path="/" component={MainPage} />
+        </Switch>
       </Router>
     );
   }

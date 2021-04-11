@@ -1,9 +1,13 @@
 import "./App.css";
-import Navbari from "./components/Navbari";
+
 import AppRouter from "./Router";
 
 function App() {
-  return <></>;
+  return (
+    <div className="App">
+      <AppRouter />
+    </div>
+  );
 }
 
 export default App;
