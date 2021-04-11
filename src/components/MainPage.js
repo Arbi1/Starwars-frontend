@@ -1,12 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Table, Button } from "reactstrap";
 import axios from "axios";
-import { history } from "../history";
 import { changeCount } from "../utils/changeCount";
-
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-import { set } from "lodash";
 
 const MainPage = (props) => {
   const [theClass, setTheClass] = useState("starships");
@@ -45,17 +40,6 @@ const MainPage = (props) => {
   }, [theClass, countChange]);
   return (
     <div className="card p-5">
-      <ToastContainer
-        position="top-right"
-        autoClose={5000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-      />
       <div className="d-flex flex-row d-flex justify-content-around mb-5">
         <select value={theClass} onChange={(e) => setTheClass(e.target.value)}>
           <option value="starships">Starships</option>
